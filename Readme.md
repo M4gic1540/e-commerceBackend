@@ -20,7 +20,7 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 
 1. Clone the repository:
     ```bash
-    git clone e-commerceBackend.git
+    git clone https://github.com/M4gic1540/e-commerceBackend
     cd e-commerceBackend
     ```
 
@@ -58,14 +58,14 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 - `POST /api/login/` - Login and obtain JWT token
 - `POST /api/users/` - Register a new user
 - `PUT /api/users/<id>/` - Modify details from user 
-- `DELETE /api/users/<id>/` - Delete a User from ID
+- `DELETE /api/users/<id>/` - Delete a User by ID
 
 # PRODUCTS Endpoints
 - `GET /api/products/` - List all products
 - `GET /api/products/<id>/` - Retrieve product details
 - `POST /api/products/` - Create New product
 - `PUT /api/products/<id>/` - Modify product details
-- `DELETE /api/products/<id>/` - Delete a product from ID
+- `DELETE /api/products/<id>/` - Delete a product by ID
 
 # CART Endpoints
 - `GET /api/cart/` - List items to cart from authenticate user
