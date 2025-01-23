@@ -53,8 +53,8 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 ## API Endpoints
 
 # USER Endpoints
-- `GET /api/users/` -  List all users (do you need authenticate for view users)
-- `GET /api/users/<id>/` - List User Details (do you need authenticate for view users)
+- `GET /api/users/` -  List all users (you need authenticate for view users)
+- `GET /api/users/<id>/` - List User Details (you need authenticate for view users)
 - `POST /api/login/` - Login and obtain JWT token
 - `POST /api/users/` - Register a new user
 - `PUT /api/users/<id>/` - Modify details from user 
@@ -67,7 +67,7 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 - `PUT /api/products/<id>/` - Modify product details
 - `DELETE /api/products/<id>/` - Delete a product from ID
 
-# CARD Endpoints
+# CART Endpoints
 - `GET /api/cart/` - List items to cart from authenticate user
 - `DELETE /api/cart/<id>/` - Delete a cart from ID
 - `GET /api/cart-items/` - View cart items from authenticate user
