@@ -7,7 +7,6 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 - User registration and authentication
 - Product listing and details
 - Shopping cart management
-- Order processing
 - JWT-based authentication
 
 ## Technologies Used
