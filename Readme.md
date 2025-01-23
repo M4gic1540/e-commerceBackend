@@ -20,8 +20,8 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 
 1. Clone the repository:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone e-commerceBackend.git
+    cd e-commerceBackend
     ```
 
 2. Create and activate a virtual environment:
@@ -52,13 +52,27 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 
 ## API Endpoints
 
-- `POST /api/auth/register/` - Register a new user
-- `POST /api/auth/login/` - Login and obtain JWT token
+# USER Endpoints
+- `GET /api/users/` -  List all users (do you need authenticate for view users)
+- `GET /api/users/<id>/` - List User Details (do you need authenticate for view users)
+- `POST /api/login/` - Login and obtain JWT token
+- `POST /api/users/` - Register a new user
+- `PUT /api/users/<id>/` - Modify details from user 
+- `DELETE /api/users/<id>/` - Delete a User from ID
+
+# PRODUCTS Endpoints
 - `GET /api/products/` - List all products
 - `GET /api/products/<id>/` - Retrieve product details
-- `POST /api/cart/` - Add item to cart
-- `GET /api/cart/` - View cart items
-- `POST /api/orders/` - Create a new order
+- `POST /api/products/` - Create New product
+- `PUT /api/products/<id>/` - Modify product details
+- `DELETE /api/products/<id>/` - Delete a product from ID
+
+# CARD Endpoints
+- `GET /api/cart/` - List items to cart from authenticate user
+- `DELETE /api/cart/<id>/` - Delete a cart from ID
+- `GET /api/cart-items/` - View cart items from authenticate user
+- `POST /api/cart-items/` - Add item to cart from authenticate user
+
 
 ## Authentication
 
@@ -72,6 +86,3 @@ Authorization: Bearer <your-token>
 
 This project is licensed under the MIT License.
 
-## Contact
-
-For any inquiries, please contact [your-email@example.com].
