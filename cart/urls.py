@@ -5,4 +5,4 @@ router = DefaultRouter()
 router.register(r'cart', CartViewSet, basename='cart')
 router.register(r'cart-items', CartItemViewSet, basename='cart-item')
 
-urlpatterns = router.urls
+urlpatterns =[] + router.urls

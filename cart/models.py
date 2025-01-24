@@ -34,3 +34,15 @@ class CartItem(models.Model):
 
     def total_price(self):
         return self.product.price * self.quantity
+    
+
+class Order(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="orders"
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2)
+    items = models.ManyToManyField(CartItem)
+
+    def __str__(self):
+        return f"Orden de {self.user.username} - {self.created_at}"
