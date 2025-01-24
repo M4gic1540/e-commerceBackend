@@ -9,6 +9,18 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 - Shopping cart management
 - JWT-based authentication
 
+## Architecture
+
+This project follows a Monolithic Architecture, where all the components (user management, product management, cart, and order functionalities) are part of a single application. The monolithic approach simplifies deployment and maintenance for small to medium-sized applications.
+
+## Design Pattern
+
+The API is designed following the Model-View-Controller (MVC) pattern, where:
+Models represent the data structure and handle the database operations.
+Views contain the logic to handle HTTP requests and responses, including the use of Django REST Framework's ViewSets.
+Controllers are implicit within Django's view handling, with ViewSets and Serializers acting as controllers to process data between models and views.
+Additionally, Serializer classes in Django REST Framework adhere to the Data Transfer Object (DTO) pattern, ensuring data consistency and validation when exchanging information between the client and server.
+
 ## Technologies Used
 
 - Django
