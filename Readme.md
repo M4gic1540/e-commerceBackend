@@ -13,9 +13,6 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 
 This project follows a Monolithic Architecture, where all the components (user management, product management, cart, and order functionalities) are part of a single application. The monolithic approach simplifies deployment and maintenance.
 
-![architecture_diagram](docs\imgs\architecture_diagram.png)
-
-
 ## Design Pattern
 
 The API is designed following the Model-View-Controller (MVC) pattern, where:
