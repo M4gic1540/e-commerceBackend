@@ -71,6 +71,11 @@ This is an e-commerce API built with Django, Django REST framework, and JWT for 
 - `DELETE /api/cart/<id>/` - Delete a cart from ID
 - `GET /api/cart-items/` - View cart items from authenticate user
 - `POST /api/cart-items/` - Add item to cart from authenticate user
+- `POST /api/cart-items/` - Add item to cart from authenticate user
+
+# ORDER Endpoints
+
+- `POST /api/cart/checkout/` - proceed to checkout for authenticated users who have items in `cart-items`
 
 
 ## Authentication
