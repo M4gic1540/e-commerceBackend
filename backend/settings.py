@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     "cart",
     "rest_framework",
     "rest_framework_simplejwt",
-    "drf_yasg"
+    "drf_yasg",
+    "rest_framework_simplejwt.token_blacklist",
 ]
 
 REST_FRAMEWORK = {
@@ -62,6 +63,8 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'AUTH_HEADER_TYPES': ('Bearer',),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,  # Habilita la lista negra
 }
 
 
