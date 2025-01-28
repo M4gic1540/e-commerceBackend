@@ -23,8 +23,8 @@ from drf_yasg import openapi
 schema_view = get_schema_view(
     openapi.Info(
         title="E-commerce API",
-        default_version='v1',
-        description="API documentation for the E-commerce application",
+        default_version="v1",
+        description="Documentation for the E-commerce API",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="support@ecommerce.com"),
         license=openapi.License(name="MIT License"),
@@ -35,11 +35,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("users.urls")),
-    path("api/", include("products.urls")),
-    path("api/", include("cart.urls")),
-    path('swagger/', schema_view.with_ui('swagger',
-         cache_timeout=0), name='schema-swagger-ui'),
-    path('redoc/', schema_view.with_ui('redoc',
-         cache_timeout=0), name='schema-redoc'),
+    path("api/users/", include("users.urls")),
+    path("api/products/", include("products.urls")),
+    path("api/cart/", include("cart.urls")),
+    path("api-docs/swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("api-docs/redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
 ]
