@@ -31,6 +31,11 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'email',
                   'first_name', 'last_name', 'password', 'is_active', 'is_staff', 'is_superuser')
 
+        extra_kwargs = {
+            'is_superuser': {'read_only': False},
+            'is_staff': {'read_only': False}
+        }
+
     def create(self, validated_data):
         """
         Sobrescribe el método create para manejar el hash de la contraseña.

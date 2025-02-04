@@ -17,6 +17,16 @@ class CategoryViewSet(ModelViewSet):
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated]
 
+    def get_permissions(self):
+        """
+        Define los permisos según la acción:
+        - `create`: Permitido para todos (sin autenticación).
+        - Otras acciones: Requieren autenticación.
+        """
+        if self.action in ['list', 'retrieve']:
+            return [AllowAny()]
+        return [IsAuthenticated()]
+
 
 class ProductViewSet(ModelViewSet):
 
